@@ -1,0 +1,174 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f4f7f6;
+}
+
+/* Header y Navegación */
+header {
+    background-color: #1a5276;
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+/* Hero Section (HU-001) */
+.hero {
+    background: linear-gradient(rgba(26, 82, 118, 0.7), rgba(26, 82, 118, 0.7)), 
+                url('background-acuario.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 5%;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.btn {
+    background-color: #2ecc71;
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Secciones Comunes */
+section { padding: 4rem 5%; text-align: center; }
+h2 { color: #1a5276; margin-bottom: 2rem; }
+
+/* Grid de Servicios (HU-002) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: #eaf2f8;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.service-card:hover { transform: translateY(-5px); }
+
+/* Educación y Video (HU-004, HU-005) */
+.edu-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: white;
+    gap: 2rem;
+}
+
+.video-container, .edu-text { flex: 1; min-width: 300px; text-align: left; }
+
+.video-placeholder {
+    height: 300px;
+    background: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* Tabla de Horarios (HU-008) */
+.schedule-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.schedule-table th { background: #1a5276; color: white; padding: 1rem; }
+.schedule-table td { padding: 1rem; border-bottom: 1px solid #ddd; }
+
+/* Contacto y Ubicación (HU-010, HU-007) */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    background: #eaf2f8;
+    gap: 3rem;
+    text-align: left;
+}
+
+.contact-form, .location-info { flex: 1; min-width: 300px; }
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    background: #1a5276;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.map-placeholder {
+    height: 250px;
+    background: #d5dbdb;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+/* Footer y WhatsApp (HU-009) */
+footer { background: #1a5276; color: white; padding: 2rem; }
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Media Queries para Móvil */
+@media (max-width: 768px) {
+    header { flex-direction: column; }
+    nav ul { margin-top: 1rem; }
+    .hero h1 { font-size: 2rem; }
+}
